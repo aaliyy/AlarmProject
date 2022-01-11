@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Alarmy</title>
+
+</head>
+
+<body>  
+    <style>
+        .form-control{
+            border-radius: 30px;
+        }
+    </style>  
+
+
+    <div class="container my-3">
+        <h1>Option to set an alarm</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="alarm">Set Alarm</label>
+                <input type="text" class="form-control" id="alarm" name="alarm"
+                    placeholder="Enter the time in yyyy-mm-dd hh:mm:ss">
+
+                <small id="alarmHelp" class="form-text text-muted">We'll never share your alarm with anyone else.</small>
+            </div>
+
+
+            <button id="alarmSubmit" type="submit" class="btn btn-primary">Set Alarm</button>
+        </form>
+
+        <div class="my-2">
+            <ul id="defs"></ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<!-- <script src="js/tut12.js"></script> -->
+<!-- <script src="js/tut14.js"></script> -->
+<!-- <script src="js/tut15.js"></script> -->
+<!-- <script src="js/tut16.js"></script> -->
+<!-- <script src="js/tut17.js"></script> -->
+<!-- <script src="js/tut18.js"></script> -->
+<!-- <script src="js/tut20.js"></script> -->
+<!-- <script src="js/tut21.js"></script> -->
+<!-- <script src="js/tut23.js"></script> -->
+<!-- <script src="js/tut24.js"></script> -->
+<!-- <script src="js/tut25.js"></script> -->
+<!-- <script src="js/tut27.js"></script> -->
+<!-- <script src="js/tut28.js"></script> -->
+<!-- <script src="js/tut30.js"></script> -->
+<!-- <script src="js/tut31.js"></script> -->
+<!-- <script src="js/tut32.js"></script> -->
+<!-- <script src="js/tut34.js"></script> -->
+<!-- <script src="js/tut37.js"></script> -->
+<!-- <script src="js/tut39.js"></script> -->
+<!-- <script src="js/tut39b.js"></script> -->
+<!-- <script src="js/tut41.js"></script> -->
+<!-- <script src="js/tut43.js"></script> -->
+<!-- <script src="js/tut44.js"></script> -->
+<!-- <script src="js/tut 45.js"></script> -->
+<!-- <script src="js/tut46.js"></script> -->
+<!-- <script src="js/tut47.js"></script> -->
+<!-- <script src="js/tut48.js"></script> -->
+<!-- <script src="js/tut49.js"></script> -->
+<!-- <script src="js/tut51.js"></script> -->
+<!-- <script src="js/tut52.js"></script> -->
+<!-- <script src="js/tut53.js"></script> -->
+<!-- <script src="js/tut54.js"></script> -->
+
+</html>
+ <script>
+console.log("This is tutorial 54");
+const alarmSubmit = document.getElementById('alarmSubmit');
+
+// Add an event listener to the submit button
+alarmSubmit.addEventListener('click', setAlarm);
+
+var audio = new Audio('https://www.fesliyanstudios.com/play-mp3/4383');
+
+// function to play the alarm ring tone
+function ringBell() {
+    audio.play(); ('https://www.fesliyanstudios.com/play-mp3/4383')
+}
+
+// This function will run whenever alarm is set from the UI
+function setAlarm(e) {
+    e.preventDefault();
+    const alarm = document.getElementById('alarm');
+    alarmDate = new Date(alarm.value);
+    console.log(`Setting Alarm for ${alarmDate}...`); 
+    now = new Date();
+
+    let timeToAlarm = alarmDate - now;
+    console.log(timeToAlarm);
+    if(timeToAlarm>=0){
+        setTimeout(() => {
+            console.log("Ringing now")
+            ringBell();
+        }, timeToAlarm);
+    }
+}
+</script>
