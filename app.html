@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<title>alarm</title>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script></head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+     <style>
+          .registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+     </style>
+     <br> <br> <br>
+     <center>
+          <h2>
+     <script>
+          // Function to generate random number
+           function randomNumber(min, max) {
+               return Math.floor(Math.random() * (max - min) + min);
+          }
+
+         
+          // Function call
+      var random1= randomNumber(1, 100);
+      document.write( random1 );
+      var add = document.write(' +');
+       
+          </script>	
+          					
+     <script>
+          // Function to generate random number
+          function randomNumber(min, max) {
+               return Math.floor(Math.random() * (max - min) + min);
+          }
+          
+          
+          
+          // Function call
+      var random2=randomNumber(1, 100); document.write( random2 );
+       var isequalto = document.write(" = ?")
+       function onSubmit(btn)
+       {
+          var ans = document.getElementById("answer").value;
+          
+          if(random1+random2 == ans)
+               alert("correct");
+          else
+               alert("sorry");
+
+       }
+          </script>	
+          </center>
+     </h2>
+     <style>
+          input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+.a{
+  border-radius: 30px;
+}
+.dropdown{
+     float:right;
+}
+
+      </style>
+
+  <div class="container">
+     
+      <label for="uname"></label>
+      <input id="answer" class="a" type="text" placeholder="Enter answer" name="uname" required>	
+      <button  type="submit" class="btn btn-primary" onclick="onSubmit(this);"  > 
+          Submit
+          </button>
+          <div class="dropdown">
+               <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+               life line
+               </button>
+          <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">skip</a></li>
+               <li><a class="dropdown-item" href="#"></a></li>
+             </ul>
+           				
+</body>
+</html>
